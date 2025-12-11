@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-
 import logoCash7 from "./assets/logoCash7.png";
-import cardGreen from "./assets/cartaoVerde.png";
-import cardTransparent from "./assets/cartaoTransparente.png";
-
-// NOVAS IMAGENS
+import cartaoVerde from "./assets/cartaoVerde.png";
+import cartaoTransparente from "./assets/cartaoTransparente.png";
 import celular from "./assets/celular.png";
-
 import missaoIcon from "./assets/missaoIcon.png";
 import visaoIcon from "./assets/visaoIcon.png";
-
 import eticaIcon from "./assets/eticaIcon.png";
 import atendimentoIcon from "./assets/atendimentoIcon.png";
 import focoIcon from "./assets/focoIcon.png";
 import inovacaoIcon from "./assets/inovacaoIcon.png";
+import navIcon from "./assets/navIcon.png";
+
 
 // =============================
 // DADOS – CARROSSEL PRODUTOS
@@ -67,7 +64,7 @@ const TICKER_ITEMS = [
 const App: React.FC = () => {
   const [activeProductIndex, setActiveProductIndex] = useState(0);
 
-  // Auto-play do carrossel a cada 6 segundos
+
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveProductIndex((prev) => (prev + 1) % PRODUCTS.length);
@@ -98,11 +95,25 @@ const App: React.FC = () => {
         <img src={logoCash7} alt="Logo Cash7" className="logo" />
 
         <nav className="nav">
-          <a href="#sobre">Sobre nós</a>
-          <a href="#missao">Missão & Visão</a>
-          <a href="#produtos">Produtos</a>
-          <a href="#simulacao">Simulação</a>
-          <a href="#contato">Contato</a>
+          <a href="#sobre">
+            Sobre nós <img src={navIcon} alt="" className="nav-icon" />
+          </a>
+
+          <a href="#missao">
+            Missão & Visão <img src={navIcon} alt="" className="nav-icon" />
+          </a>
+
+          <a href="#produtos">
+            Produtos <img src={navIcon} alt="" className="nav-icon" />
+          </a>
+
+          <a href="#simulacao">
+            Simulação <img src={navIcon} alt="" className="nav-icon" />
+          </a>
+
+          <a href="#contato">
+            Contato <img src={navIcon} alt="" className="nav-icon" />
+          </a>
         </nav>
       </header>
 
@@ -128,14 +139,19 @@ const App: React.FC = () => {
           {/* LADO DIREITO – CARTÕES EM IMAGEM */}
           <section className="hero-art">
             <img
-              src={cardTransparent}
+              src={cartaoTransparente}
               alt="Cartão Cash7 transparente"
               className="card-img card-img-back"
             />
             <img
-              src={cardGreen}
+              src={cartaoVerde}
               alt="Cartão Cash7 verde"
               className="card-img card-img-front"
+            />
+            <img
+              src={logoCash7}
+              alt="Logo Cash7"
+              className="logo-img"
             />
           </section>
         </section>
@@ -199,7 +215,6 @@ const App: React.FC = () => {
                 />
               </div>
             </div>
-
             {/* Texto central */}
             <div className="mission-center">
               <h3 className="mission-copy-title">

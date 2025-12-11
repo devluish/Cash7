@@ -27,14 +27,14 @@ body {
   margin: 0 auto;
   padding: 10px 16px;
   display: grid;
-  grid-template-columns: auto 1fr; /* logo */
+  grid-template-columns: auto 1fr;
   align-items: center;
 }
 
 /* Logo como imagem */
 .logo {
-  height: 80px;
-  width: 90px; /* corrigido de 90x para 90px */
+  height: 85px;
+  width: 110px;
   margin-left: 70px;
 }
 
@@ -42,9 +42,15 @@ body {
 .nav {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 120px;
   font-size: 14px;
   margin-right: 150px;
+}
+
+.nav-icon {
+  width: 12px;
+  height: 12px;
+  margin-top: 2px;
 }
 
 .nav a {
@@ -59,16 +65,16 @@ body {
   color: #0b8496;
 }
 
-/* HERO (section principal) */
+/* HERO parte principal*/
 .hero {
   max-width: 1120px;
-  margin: 40px auto 60px;
-  padding: 0 16px;
+  margin: 0px auto;
+  padding:  16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  min-height: 485px;
+  gap: 100px;
+  min-height: 450px;
 }
 
 /* Texto da esquerda */
@@ -79,10 +85,10 @@ body {
 .hero-text h1 {
   font-size: 50px;
   line-height: 1.2;
-  margin-bottom: 16px;
-  word-spacing: 10px;
+  margin-bottom: 20px;
+  word-spacing: 15px;
   font-family: "Jost", sans-serif;
-  font-weight: 400;
+  font-weight: 450;
 }
 
 .hero-text p {
@@ -104,6 +110,7 @@ body {
   font-size: 14px;
   cursor: pointer;
   font-weight: 500;
+  font-weight: bold;
 }
 
 .btn-primary {
@@ -139,22 +146,75 @@ body {
 /* Estilo base dos cards */
 .card-img {
   position: absolute;
-  width: 260px; /* ajusta conforme tamanho real da imagem */
+  width: 320px;
   height: auto;
-  filter: drop-shadow(0 18px 40px rgba(15, 23, 42, 0.25));
+  opacity: 0;
+  filter: drop-shadow(0 18px 40px rgba(15, 23, 42, 0.35));
+  z-index: 2;
 }
 
-/* Cartão do fundo (transparente/branco) */
+.hero-art {
+  position: relative;
+}
+
+/* Logo atrás dos cartões */
+.logo-img {
+  position: absolute;
+  width: 241px;
+  height: 136px;
+  left: 395px;
+  top: 20px;
+}
+
+/* Cartão animação */
+/* Animação cartão transparente (entra de cima) */
+@keyframes slideCardBack {
+  0% {
+    transform: translateY(-60px) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(4deg);
+    opacity: 1;
+  }
+}
+
+/* Animação cartão verde (entra de baixo) */
+@keyframes slideCardFront {
+  0% {
+    transform: translateY(60px) rotate(-5deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+
+/* Cartão home transparente */
 .card-img-back {
-  transform: rotate(-25deg);
-  top: 10px;
+  transform: rotate(4deg);
+  left: 200px;
   right: 40px;
+  width: 361.73px;
+  height: auto;
+  animation: slideCardBack 1.5s ease-out forwards;
 }
 
-/* Cartão da frente (verde) */
+/* Cartão home verde */
 .card-img-front {
-  transform: rotate(10deg);
-  left: 20px;
+  left: 72px;
+  top: 100px;
+  width: 320px;
+  animation: slideCardFront 1.3s ease-out forwards;
+}
+
+/* Logo ao lado dos cartões */
+.logo-img-home{
+  
+  left: 100px;
+  top: 100px;
 }
 
 /* SOBRE NÓS */
@@ -167,7 +227,7 @@ body {
 
 .about-title {
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
   margin-bottom: 32px;
   font-family: "Jost", sans-serif;
@@ -177,6 +237,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 40px;
+  font-weight: medium;
   font-size: 16px;
   line-height: 1.7;
   color: #111827;
@@ -187,22 +248,20 @@ body {
   text-align: left;
 }
 
-/* Box de destaque embaixo (fundo azul claro) */
+/* Box do fundo azul */
 .about-highlight {
   margin-top: 16px;
   padding: 20px 28px;
   border-radius: 12px;
-  border: 1px solid #bfdbfe; /* azul clarinho da borda */
-  background-color: #eff6ff; /* azul clarinho do fundo */
-  font-size: 15px;
+  border: 1px solid #bfdbfe;
+  background-color: #EFF6FF;
+  font-size: 16px;
   line-height: 1.7;
   color: #111827;
+  text-align: center;
 }
 
-/* ============================= */
 /* MISSÃO, VISÃO E VALORES       */
-/* ============================= */
-
 .mission {
   max-width: 1120px;
   margin: 40px auto 100px;
@@ -251,14 +310,16 @@ body {
   width: 230px;
   height: 60px;
   left: -25px;
-  background-color: #7dcae3; /* cor pedida */
+  background-color: #7dcae3;
+  /* cor pedida */
 }
 
 .mission-shape-2 {
   width: 260px;
   height: 60px;
   left: 20px;
-  background-color: #32829b; /* cor pedida */
+  background-color: #32829b;
+  /* cor pedida */
 }
 
 .mission-phone-img {
@@ -306,11 +367,13 @@ body {
 }
 
 .mission-card--mission {
-  border-color: #155dfc; /* azul */
+  border-color: #155dfc;
+  /* azul */
 }
 
 .mission-card--vision {
-  border-color: #00a63e; /* verde */
+  border-color: #00a63e;
+  /* verde */
 }
 
 .mission-card-header {
@@ -401,7 +464,8 @@ body {
   margin: 0 auto;
   padding: 32px 48px 28px;
   border-radius: 24px;
-  background-color: #f2fff6; /* verdinho suave */
+  background-color: #f2fff6;
+  /* verdinho suave */
   border: 1px solid #d1fae5;
   box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
 }
@@ -481,7 +545,7 @@ body {
 .ticker {
   width: 100%;
   overflow: hidden;
-  background-color: #0f7492; /* azul/verde da identidade visual */
+  background-color: #0f7492;
   color: #ffffff;
   padding: 10px 0;
   margin-top: 40px;
@@ -490,13 +554,13 @@ body {
 .ticker-inner {
   display: inline-flex;
   white-space: nowrap;
-  animation: ticker-scroll 20s linear infinite;
+  animation: ticker-scroll 45s linear infinite;
 }
 
 .ticker-item {
-  padding: 0 32px; /* espaço entre os itens */
-  font-size: 16px;
-  font-weight: 500;
+  padding: 0 100px;
+  font-size: 40px;
+  font-weight: 550;
 }
 
 /* animação “cobra” */
@@ -504,8 +568,8 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
-    /* como duplicamos o conteúdo, -50% fecha o loop */
     transform: translateX(-50%);
   }
 }
