@@ -12,6 +12,7 @@ import focoIcon from "./assets/focoIcon.png";
 import inovacaoIcon from "./assets/inovacaoIcon.png";
 import navIcon from "./assets/navIcon.png";
 
+
 /**
  * ATUALIZAÇÃO DO PROJETO
  * - Fazer separação do código e tirar tudo do app main

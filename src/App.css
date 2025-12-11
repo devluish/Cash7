@@ -319,23 +319,31 @@ AJUSTAR O FORMATO DE GIRAR
 /* shapes embaixo do celular */
 .mission-shape {
   position: absolute;
-  bottom: 0;
-  
+  bottom: -10px;
+  border-radius: 4px;
+  transform-origin: left center;
 }
 
+/* shape claro */
 .mission-shape-1 {
   width: 230px;
-  height: 60px;
+  height: 55px;
   left: -25px;
   background-color: #7DCAE3;
+  transform: rotate(-4deg);
+  z-index: 0;
 }
 
+/* shape escuro */
 .mission-shape-2 {
   width: 260px;
-  height: 60px;
+  height: 55px;
   left: 20px;
   background-color: #32829b;
+  transform: rotate(-4deg);
+  z-index: -1;
 }
+
 
 .mission-phone-img {
   position: relative;
@@ -367,10 +375,14 @@ AJUSTAR O FORMATO DE GIRAR
 /* Cards Missão / Visão */
 .mission-right {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  flex-direction: row;
+  gap: 20px;
+  color: #364153;
+  justify-content: flex-start;
+  align-items: stretch; /*Altura igual*/
 }
 
+/* Ajustar largura dos cards */
 .mission-card {
   background-color: #ffffff;
   border-radius: 16px;
@@ -378,18 +390,20 @@ AJUSTAR O FORMATO DE GIRAR
   border: 2px solid #e5e7eb;
   box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.18;
+  flex: 1;
+  width: 175px;
+  height: 352px;
 }
 
 .mission-card--mission {
   border-color: #155dfc;
-  /* azul */
 }
 
 .mission-card--vision {
   border-color: #00a63e;
-  /* verde */
 }
+
 
 .mission-card-header {
   display: flex;
