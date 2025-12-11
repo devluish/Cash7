@@ -167,7 +167,7 @@ body {
 }
 
 /* Cartão animação */
-/* Animação cartão transparente (entra de cima) */
+/* Animação cartão transparente animação para CIMA */
 @keyframes slideCardBack {
   0% {
     transform: translateY(-60px) rotate(0deg);
@@ -179,7 +179,7 @@ body {
   }
 }
 
-/* Animação cartão verde (entra de baixo) */
+/* Animação cartão verde animação para BAIXO */
 @keyframes slideCardFront {
   0% {
     transform: translateY(60px) rotate(-5deg);
@@ -250,9 +250,13 @@ body {
 
 /* Box do fundo azul */
 .about-highlight {
-  margin-top: 16px;
-  padding: 20px 28px;
+  margin-top: 20px;
+  margin-left: -40px;
+  margin-right: 0px;
+  padding: 20px 20px;
+  width: 1181px;
   border-radius: 12px;
+  height: 125px;
   border: 1px solid #bfdbfe;
   background-color: #EFF6FF;
   font-size: 16px;
@@ -261,8 +265,8 @@ body {
   text-align: center;
 }
 
-/* MISSÃO, VISÃO E VALORES       */
-.mission {
+/* MISSÃO, VISÃO E VALORES */
+.missao {
   max-width: 1120px;
   margin: 40px auto 100px;
   padding: 0 16px 0;
@@ -290,6 +294,18 @@ body {
   justify-content: center;
 }
 
+/*
+PESQUISAR COMO FAZER O SLIDE OCORRER APENAS QUANDO O USUÁRIO ESTIVER NA PARTE DE MISSÃO, VISÃO E VALORES
+AJUSTAR O FORMATO DE GIRAR
+*/
+
+@keyframes slideCelular {
+  0%{
+    transform: translateY(-70px) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
 .mission-phone-wrapper {
   position: relative;
   width: 260px;
@@ -297,21 +313,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: slideCelular 1.5s ease-out forwards;
 }
 
 /* shapes embaixo do celular */
 .mission-shape {
   position: absolute;
   bottom: 0;
-  border-radius: 12px;
+  
 }
 
 .mission-shape-1 {
   width: 230px;
   height: 60px;
   left: -25px;
-  background-color: #7dcae3;
-  /* cor pedida */
+  background-color: #7DCAE3;
 }
 
 .mission-shape-2 {
@@ -319,7 +335,6 @@ body {
   height: 60px;
   left: 20px;
   background-color: #32829b;
-  /* cor pedida */
 }
 
 .mission-phone-img {

@@ -12,6 +12,14 @@ import focoIcon from "./assets/focoIcon.png";
 import inovacaoIcon from "./assets/inovacaoIcon.png";
 import navIcon from "./assets/navIcon.png";
 
+/**
+ * ATUALIZAÇÃO DO PROJETO
+ * - Fazer separação do código e tirar tudo do app main
+ * - Fazer os ajustes de imagem
+ * - Terminar o restante das imagens
+ * - Anotaçoes pelo CSS para compreender o que ajustar futuramente
+ * - Anotações mais detalhadas pelo código
+ */
 
 // =============================
 // DADOS – CARROSSEL PRODUTOS
@@ -196,10 +204,10 @@ const App: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* MISSÃO, VISÃO E VALORES */}
-        <section id="missao" className="mission">
+        <section id="missao" className="missao">
           <h2 className="mission-title">Missão, Visão e Valores</h2>
+
 
           {/* Parte de cima: celular + texto + cards */}
           <div className="mission-top">
@@ -210,7 +218,7 @@ const App: React.FC = () => {
                 <div className="mission-shape mission-shape-2" />
                 <img
                   src={celular}
-                  alt="Aplicativo Cash7 em um celular"
+                  alt="Representação de celular"
                   className="mission-phone-img"
                 />
               </div>
@@ -269,7 +277,6 @@ const App: React.FC = () => {
           {/* NOSSOS VALORES */}
           <div className="values-section">
             <h3 className="values-title">Nossos Valores</h3>
-
             <div className="values-grid">
               <div className="value-item">
                 <div className="value-icon-wrapper">
