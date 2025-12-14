@@ -1,0 +1,49 @@
+.about {
+  max-width: 1120px;
+  margin: 80px auto 100px;
+  padding: 0 16px;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  font-family: "Jost", sans-serif;
+}
+
+.about-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #111827;
+  margin-bottom: 32px;
+}
+
+.about-columns p {
+  text-align: left;
+}
+
+/* Box do fundo azul */
+.about-highlight {
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  border-radius: 12px;
+  min-height: 125px;
+  border: 1px solid #bfdbfe;
+  background-color: #EFF6FF;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #111827;
+  text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .about-columns {
+    grid-template-columns: 1fr;
+  }
+}

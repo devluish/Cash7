@@ -1,0 +1,37 @@
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  background-color: #0f7492;
+  color: #ffffff;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+.ticker-inner {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker-scroll 45s linear infinite;
+}
+
+.ticker-item {
+  padding: 0 100px;
+  font-size: 40px;
+  font-weight: 550;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .ticker-item {
+    font-size: 24px;
+    padding: 0 40px;
+  }
+}
